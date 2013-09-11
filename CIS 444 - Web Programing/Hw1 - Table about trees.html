@@ -1,0 +1,98 @@
+<!doctype html>
+<!-- Kevin Novak
+CIS 444
+
+I am already very familiar with HTML and JavaScript, I hope it's okay that I played around with CSS, that's what I need to learn more of.
+
+Prompt:
+Create, test, and validate an HTML document that describes a table with the following contents:
+-The colums of the table must have the headings "Pine," "Maple," "Oak," and "Fir." 
+-The rows must have the labels "Average Height," "Average Width," "Typical Life Span," and "Leaf Type."
+-You can make up the data cell values.
+-Add a second-level column label, "Tree," and a second-level row label, "Characteristics"-->
+<html lang="en">
+	<head>
+		<title>Kevin's favorite trees</title>
+		<meta charset = "utf-8" />
+
+		<style>
+			table, tr, th, td{
+				border:1px solid #E6E6E6;
+				border-radius:3px;
+				}
+
+			th {
+				font-family:Helvetica;
+				}
+			tr:nth-child(even){ 
+				background-color:#CEECF5; 
+				}
+			.char {
+				text-align:left;
+				}
+			#metaheader {
+				text-align:center
+				}
+			table * *:hover { 
+				background-color:#33CC33;
+				} 
+		</style>
+	</head>
+
+	<body>
+		<h1>Welcome to my tree page!</h1>
+		<p>I like trees a lot.</p>
+		
+		<table style="position:fixed; top: 50%; left: 50%; margin-top: -80px; margin-left: -307px;">
+		<caption>This table contains a list of my favorite trees, and some of their most interesting characteristics.</caption>
+		<tr> 
+			<!--Meta header -->
+			
+			<th rowspan="2" colspan="2"></th> 
+			<th colspan="4" id="metaheader">Tree</th>	
+		</tr>
+		
+		<!-- Tree types -->
+			<!-- Skip one for the rowspan above -->
+		<tr>	
+			<th>Pine</th>
+			<th>Maple</th>
+			<th>Oak</th>
+			<th>Fir</th>
+		</tr>
+
+	<!-- Characteristics -->
+		<tr> 
+			<th rowspan="4">Characteristics</th>
+			<th class="char">Average Height<br/>(meters)</th>
+			<td>15-45</td>
+			<td>10-45</td>
+			<td>10-25</td>
+			<td>10-80</td>
+		</tr>
+		<tr> 
+			<th class="char">Average Width<br/>(diameter, meters)</th>
+			<td>4</td>
+			<td>3</td>
+			<td>5</td>
+			<td>2</td>
+		</tr>
+		<tr> 
+			<th class="char">Typical Life Span<br/>(years)</th>
+			<td>400</td>
+			<td>100</td>
+			<td>200</td>
+			<td>10</td>
+		</tr>
+		<tr> 
+			<th class="char">Leaf Type</th>
+			<td>Needles</td>
+			<td>Palmate</td>
+			<td>Broad leaf</td>
+			<td>Needles</td>
+		</tr>
+	<!-- End characteristics -->
+
+		</table>
+	</body>
+</html>
