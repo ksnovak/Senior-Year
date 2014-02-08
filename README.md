@@ -3,7 +3,7 @@ Senior-Year
 
 I have three classes that require programming. I may as well throw their stuff on git.
 
-#CS 433 - Operating Systems
+##CS 433 - Operating Systems
 ######We're learning how to create programs for an operating system.
   1. [Assignment 1](CS%20433%20-%20Operating%20Systems/A1%20-%20Ready%20queue): READY QUEUE. A CPU alternates its processing power frequently between different programs, so that everything gets attention. The ready queue holds a list of jobs that need some CPU time. 
     * I use a heap tree to structure the queue, which will ensure that element 0 is always the most important job, and gets done first.
