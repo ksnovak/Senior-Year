@@ -1,0 +1,26 @@
+* {
+	font: 14px arial;
+}
+
+table, #finalValue {
+	padding-left: 10%;
+	padding-top: 5px;
+}
+
+tr:nth-child(even) {
+	background-color: #66CCFF;
+}
+
+tr:last-child {
+	background-color: #FFFF99;
+}
+
+td, th {
+	border: 1px solid black;
+	width: 80px;
+	text-align: center;
+	}
+	
+th {
+	font-size: 18px;
+}

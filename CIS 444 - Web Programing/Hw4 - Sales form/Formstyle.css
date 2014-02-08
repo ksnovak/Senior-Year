@@ -1,0 +1,24 @@
+table {
+	border: 1px solid #0179C2;
+	}
+
+td {
+	color: #0179C2;
+}
+
+caption {
+	font-weight:bold;
+	height: 40px;
+	line-height: 40px;
+}
+
+th , caption{
+	background-color: #0179C2;
+	color: white;
+}
+
+input {
+	width: 80px;
+	color: #0179C2;
+}
+

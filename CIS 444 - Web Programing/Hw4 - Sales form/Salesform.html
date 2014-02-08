@@ -1,0 +1,71 @@
+<!-- Kevin Novak
+CIS 444 
+Assignment 4
+
+5.3 Develop, test, and validate an HTML document that has checkboxes for apple (59 cents each), orange (49 cents each), and banana (39 cents each), along with a Submit button. Each of the checkboxes should have its own onclick event handler. Thes handlers must add the cost of their fruit to a total cost. An event handler for the submit button must produce an alert window with the message "Your total cost is $xxx", where xxx is the total cost of the chosen fruit, including 5% sales tax. This handler must return false (to avoid actual submission of the form data).
+
+5.4 Develop, test, and validate an HTML document similar to that of 5.3. In this case, use text boxes rather than checkboxes. These text boxes take a number, which is the purchased number of the particular fruit. The rest of the document should behave exactly like 5.3.
+
+5.5 Add reality checks to the text boxes of the document in 5.4. The checks on the text box inputs should ensure that the input values are numbers in the range from 0 to 99.
+
+
+
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<title>The Novak Fruiteria</title>
+	<meta charset="utf-8" />
+	<script src="Formcalculator.js"></script>
+	<link rel="stylesheet" type="text/css" href="Formstyle.css" />
+</head>
+<body>
+	
+	<form>
+	<h1>Welcome to my fruit stand</h1>
+	<table>
+		<caption>Purchase my fruit!</caption>
+		<tr>
+			<th style="width: 100px">Fruit</th>
+			<th style="width: 100px">Cost per unit</th>
+			<th style="width: 80px">Quantity</th>
+		</tr>
+		<tr>
+			<td><label for="appleQuantity">Apple</label></td>
+			<td>$0.59</td>
+			<td>		<input type="text" id="appleQuantity" onchange="updatetotal(event)">	</td>
+		</tr>
+		<tr>
+			<td><label for="orangeQuantity">Orange</label></td>
+			<td>$0.49</td>
+			<td>		<input type="text" id="orangeQuantity" onchange="updatetotal(event)">	</td>
+		</tr>
+		<tr>
+			<td><label for="bananaQuantity">Banana</label></td>
+			<td>$0.39</td>
+			<td>		<input type="text" id="bananaQuantity" onchange="updatetotal(event)"> 	</td>
+		</tr>
+	</table>
+<br /> <br />
+	<table style="text-align: right">
+	<caption>Cost</caption>
+	<tr>
+		<td style="width: 100px">Subtotal: </td>
+		<td id="subtotal" style="width: 100px">$0.00</td>
+	</tr>
+	<tr>
+		<td>Tax: </td>
+		<td id="tax" style="text-decoration: underline;">+ $0.00</td>
+	</tr>
+	<tr>
+		<td>Total: </td>
+		<td id="total">$0.00</td>
+	</tr>
+	</table>
+		
+	
+	<input type="submit" value="Submit!" onclick="return submitPurchase()">
+	</form>
+	
+</body>
+</html>
