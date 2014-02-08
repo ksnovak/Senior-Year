@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!--
+7.6 Modify the XSLT style sheet of Exercise 7.5 to format all the car elements in the XML document of Exercise 7.2, and use the style sheet to create a display of the whole document.
+
+NOTE: This document has an xsl stylesheet, hw7.6Novak.xsl.
+-->
+
+<!DOCTYPE catalog SYSTEM "hw7.1Novak.dtd">
+<?xml-stylesheet type="text/xsl" href="hw7.6Novak.xsl" ?>
+	<catalog>
+		<car>
+			<make>Ford</make>
+			<model>Mustang</model>
+			<year>1995</year>
+			<color>Red</color>
+			<engine>
+				<number_of_cylinders>8</number_of_cylinders>
+				<fuel_system type="carbureted">Carburetion</fuel_system>
+			</engine>
+			<number_of_doors>2</number_of_doors>
+			<transmission_type>manual</transmission_type>
+			<accessories radio="yes" air_conditioning="yes" power_windows="yes" power_steering="yes" power_brakes="yes">Fully loaded</accessories>
+		</car>
+		<car>
+			<make>Honda</make>
+			<model>Civic</model>
+			<year>2003</year>
+			<color>Black</color>
+			<engine>
+				<number_of_cylinders>4</number_of_cylinders>
+				<fuel_system type="fuel_injected">Fuel injection</fuel_system>
+			</engine>
+			<number_of_doors>4</number_of_doors>
+			<transmission_type>automatic</transmission_type>
+			<accessories radio="yes" air_conditioning="no" power_windows="yes" power_steering="yes" power_brakes="yes"></accessories>
+		</car>
+		
+		<car>
+			<make>Jeep</make>
+			<model>Wrangler</model>
+			<year>2010</year>
+			<color>Turquoise</color>
+			<engine>
+				<number_of_cylinders>6</number_of_cylinders>
+				<fuel_system type="carbureted">Carburetion</fuel_system>
+			</engine>
+			<number_of_doors>4</number_of_doors>
+			<transmission_type>manual</transmission_type>
+			<accessories radio="yes" air_conditioning="no" power_windows="no" power_steering="yes" power_brakes="yes">Freedom!</accessories>
+		</car>
+	</catalog>

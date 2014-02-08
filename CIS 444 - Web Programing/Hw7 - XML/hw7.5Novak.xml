@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!--
+7.2 Create an XML document with at least three instances of the car element defined in the DTD of exercise 7.1. 
+Process this document by using the DTD of Exercise 7.1, and produce a display of the raw XML document. 
+
+NOTE: This document has an xsl stylesheet.
+-->
+
+
+<?xml-stylesheet type="text/xsl" href="hw7.5Novak.xsl" ?>
+<car>
+	<make>Ford</make>
+	<model>Mustang</model>
+	<year>1995</year>
+	<color>Red</color>
+	<engine>
+		<number_of_cylinders>8</number_of_cylinders>
+		<fuel_system type="carbureted">Carburetion</fuel_system>
+	</engine>
+	<number_of_doors>2</number_of_doors>
+	<transmission_type>manual</transmission_type>
+	<accessories radio="yes" air_conditioning="yes" power_windows="yes" power_steering="yes" power_brakes="yes">Fully loaded</accessories>
+</car>

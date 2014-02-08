@@ -1,0 +1,28 @@
+<!--7.1 Create a DTD for a catalog of cars, where each car has the child elements make, model, year, color, engine, number_of_doors, transmission_type, and accessories. The engine element has the child elements number_of_cylinders and fuel_system (carbureted or fuel injected). The accessories element has the attributes radio, air_conditioning, power_windows, power_steering, and power_brakes, each of which is required and has the possible values yes and no. Entities must be declared for the names of popular car models.-->
+
+<?xml version="1.0" encoding="utf-8" ?>
+<!ELEMENT catalog (car+)>
+<!ELEMENT car (make, model, year, color, engine, number_of_doors, transmission_type, accessories)>
+
+<!ELEMENT make (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT engine (number_of_cylinders, fuel_system)>
+	<!ELEMENT number_of_cylinders (#PCDATA)>
+	<!ELEMENT fuel_system (#PCDATA)>
+		<!ATTLIST fuel_system type (carbureted|fuel_injected)>
+<!ELEMENT number_of_doors (#PCDATA)>
+<!ELEMENT transmission_type (#PCDATA)>
+<!ELEMENT accessories (#PCDATA)>
+	<!ATTLIST accessories radio CDATA (yes|no) #REQUIRED> 
+	<!ATTLIST accessories air_conditioning CDATA (yes|no) #REQUIRED> 
+	<!ATTLIST accessories power_windows CDATA (yes|no) #REQUIRED> 
+	<!ATTLIST accessories power_steering CDATA (yes|no) #REQUIRED> 
+	<!ATTLIST accessories power_brakes CDATA (yes|no) #REQUIRED> 
+
+
+<!ENTITY m "Mustang">
+<!ENTITY w "Wrangler">
+<!ENTITY c "Civic">
+<!ENTITY a "Accord">

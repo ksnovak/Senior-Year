@@ -1,0 +1,58 @@
+/*7.4 Create a CSS style sheet for the XML document of Exercise 7.2, and use it to create a display of that document.*/
+
+car {
+	display: block;
+	margin-top: 20px;
+	margin-left: 10px;
+	background-color: #EBFDFF;
+	max-width: 400px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+make, model, year {
+	font-size: 16pt;
+	color: orange;
+}
+
+make {
+	margin: 10px;
+}
+
+color, fuel_system, engine *, number_of_doors, transmission_type, accessories{
+	margin-left: 40px;
+}
+
+year:after {
+	content:"\a";
+	white-space: pre;
+}
+
+color:before {
+	content:"Color: ";
+}
+
+color:after {
+	content: '\a';
+	white-space: pre;
+}
+
+fuel_system:after {
+	content: '\a';
+	white-space: pre;
+}
+
+number_of_cylinders:after {
+	content: ' cylinders\a';
+	white-space: pre;
+}
+
+number_of_doors:after {
+	content: ' doors\a';
+	white-space: pre;
+}
+
+transmission_type:after {
+	content: ' transmission\a';
+	white-space: pre;
+}
